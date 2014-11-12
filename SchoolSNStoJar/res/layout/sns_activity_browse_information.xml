@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    
+     <RelativeLayout
+        android:id="@+id/browse_msg_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/main_top_bg" >
+
+        <Button
+            android:id="@+id/browse_msg_topbar_back"
+            style="@style/btn_of_head"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/sns_backbtn_bg"
+             />
+
+        <TextView
+            android:id="@+id/browse_msg_topbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+    
+     
+    <com.biznest.campusinformation.util.PullToRefreshListView
+        android:id="@+id/browse_msg_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/browse_msg_topbar"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="15dp"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:focusable="false"
+        android:fastScrollEnabled="true" 
+        android:listSelector="@drawable/sns_compost_infomation_listview_selector" />
+    
+    
+
+</RelativeLayout>

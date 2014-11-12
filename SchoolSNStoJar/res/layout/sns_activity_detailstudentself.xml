@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background" >
+
+    <RelativeLayout
+        android:id="@+id/detailstudentself_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/main_top_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/contactsdetail"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detailstudentself_backtv"
+            style="@style/btn_of_head"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:background="@drawable/sns_backbtn_bg"
+            android:textColor="@color/white" />
+        
+        <Button
+		    android:id="@+id/patriarchinfobtn"
+		    style="@style/btn_of_head"
+		    android:layout_alignParentRight="true"
+		    android:text="@string/patriarch"
+		    android:background="@drawable/sns_btn_submit_selector"
+	    />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/detailstudentself_layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detailstudentself_layout"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="51dip"
+            android:layout_height="51dip"
+            android:layout_marginLeft="15dip"
+            android:background="@drawable/detail_people_ico" />
+
+        <TextView
+            android:id="@+id/detailstudentself_nametv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dip"
+            android:gravity="center_vertical|left"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailstudentself_layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="220dip"
+        android:layout_below="@id/detailstudentself_layout1"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/detail_teacher_bg"
+        android:orientation="vertical"
+        android:padding="2dip" >
+
+        <LinearLayout
+            android:id="@+id/ll_position"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="职位："
+                android:textColor="#47535c"
+                android:textSize="18dip" />
+
+            <TextView
+                android:id="@+id/detailteacher_posttv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="#004377"
+                android:textSize="18dip" />
+        </LinearLayout>
+		
+		<TextView
+		    android:id="@+id/first_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider_line2"
+             />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/mobile"
+                android:textColor="#47535c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detailstudentself_mobilephonenumtv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="#004377"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider_line2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/telephone"
+                android:textColor="#47535c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detailstudentself_telephonenumtv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="#004377"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider_line2" />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/email"
+                android:textColor="#47535c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detailstudentself_emailtv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="#004377"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/divider_line2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="15dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:text="@string/qq"
+                android:textColor="#47535c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/detailstudentself_qqtv"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textColor="#004377"
+                android:textSize="16sp" />
+        </LinearLayout>
+	    
+	</LinearLayout>
+
+	
+	<Button
+	    android:id="@+id/btn_send_message"
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dip"
+	    android:layout_marginLeft="15dip"
+	    android:layout_marginRight="15dip"
+	    android:layout_marginTop="15dip"
+	    android:layout_below="@id/detailstudentself_layout2"
+	    android:text="@string/send_message"
+	    android:textSize="18sp"
+	    android:textColor="@color/white"
+	    android:background="@drawable/sns_main_login_button_selected"
+	    />
+	
+	
+	
+	</RelativeLayout>

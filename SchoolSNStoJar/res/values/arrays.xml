@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="long_click_menu">
+        <item>@string/delete</item>
+    </string-array>
+    
+    <string-array name="school_contact_spinner_data">
+        <item>@string/all</item>
+        <item>@string/teacher</item>
+         <item>@string/student</item>
+        <item>@string/parents</item>
+    </string-array>
+
+
+</resources>

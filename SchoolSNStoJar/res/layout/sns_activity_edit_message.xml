@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <RelativeLayout 
+        android:id="@+id/edit_msg_allbar"
+        android:layout_width="match_parent"
+   		android:layout_height="match_parent"
+   		android:background="@color/background"	
+   		android:focusableInTouchMode="true"
+   		>
+  
+
+    <RelativeLayout
+        android:id="@+id/edit_msg_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/main_top_bg" >
+
+        <Button
+            android:id="@+id/edit_msg_topbar_btn_back"
+            style="@style/btn_of_head"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/sns_backbtn_bg" />
+
+        <TextView
+            android:id="@+id/edit_msg_topbar_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_sms"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/edit_msg_topbar_btn_send"
+            style="@style/btn_of_head"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sns_btn_submit_selector"
+            android:text="@string/send" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_msg_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/edit_msg_rl_addimage_zone"
+        android:layout_below="@id/edit_msg_topbar" >
+
+        <ScrollView
+            android:id="@+id/edit_msg_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <FrameLayout
+                    android:id="@+id/test"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <RelativeLayout
+                        android:id="@+id/editPanel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/sns_mm_listitem" >
+
+                        <com.biznest.campusinformation.customedittext.FlowLayout
+                            android:id="@+id/area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5.0dp"
+                            android:focusable="false"
+                            android:orientation="vertical" >
+                        </com.biznest.campusinformation.customedittext.FlowLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="50dip"
+                            android:layout_below="@id/area"
+                            android:layout_centerVertical="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" >
+
+                            <TextView
+                                android:id="@+id/tv"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dip"
+                                android:layout_marginRight="5dip"
+                                android:gravity="center"
+                                android:text="@string/sendto"
+                                android:textColor="@color/black_shallow"
+                                android:textSize="15sp" />
+
+                            <EditText
+                                android:id="@+id/contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dip"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/add_contatcts"
+                                android:layout_toRightOf="@id/tv"
+                                android:background="@null"
+                                android:editable="false"
+                                android:text=""
+                                android:textColor="#000000" />
+
+                            <LinearLayout
+                                android:id="@+id/editTipsPanel"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dip"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/add_contatcts"
+                                android:layout_toRightOf="@id/tv"
+                                android:padding="5dp" >
+
+                                <TextView
+                                    android:id="@+id/editTips"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:ellipsize="middle"
+                                    android:gravity="center_vertical|left"
+                                    android:singleLine="true"
+                                    android:textColor="@android:color/black" />
+                            </LinearLayout>
+
+                            <ImageButton
+                                android:id="@+id/add_contatcts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/sns_add_contacts_bg" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <ListView
+                    android:id="@+id/contacts_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/test"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:drawSelectorOnTop="false"
+                    android:fadeScrollbars="true"
+                    android:fadingEdge="none"
+                    android:focusable="false"
+                    android:scrollbarStyle="insideOverlay"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/edit_msg_rl_msgtitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contacts_listview"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/sns_mm_listitem"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+
+                    <TextView
+                        android:id="@+id/edit_msg_tv_msgtitle"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:gravity="center"
+                        android:text="@string/title"
+                        android:textColor="@color/black_shallow"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/edit_msg_et_msgtitle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/edit_msg_tv_msgtitle"
+                        android:background="@null"
+                        android:maxLength="20"
+                        android:singleLine="true" />
+                </RelativeLayout>
+
+                <!--
+                 <RelativeLayout
+                android:id="@+id/edit_msg_rl_msgcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+                -->
+
+                <EditText
+                    android:id="@+id/edit_msg_et_msgcontent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/edit_msg_rl_msgtitle"
+                    android:layout_margin="5dp"
+                    android:background="@null"
+                    android:gravity="top" />
+                <!-- </RelativeLayout> -->
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/edit_msg_rl_addimage_zone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sns_mm_listitem" >
+
+        <com.biznest.campusinformation.util.RayLayout
+            xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:visibility="gone"
+            custom:childSize="50dp"
+            custom:leftHolderWidth="0dp" />
+
+        <GridView
+            android:id="@+id/edit_msg_gv_msgimage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_layout"
+            android:gravity="center"
+            android:numColumns="3" >
+        </GridView>
+    </RelativeLayout>
+  </RelativeLayout>
+</RelativeLayout>

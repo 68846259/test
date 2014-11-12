@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- android:onClick="startchat"> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sns_mm_listitem" >
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/information_head" />
+
+        <TextView
+            android:id="@+id/item_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/head"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/main_num_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="7sp" 
+            android:visibility="invisible"/>
+        
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/item_num"
+            android:layout_margin="5dp"
+            >
+            
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+            
+            
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/from"
+            android:layout_alignLeft="@id/from"
+            android:paddingRight="3dp"
+            android:textColor="#666"
+            android:textSize="14sp" />
+        
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/subject"
+            android:layout_toRightOf="@id/subject"
+            android:src="@drawable/picture_icon" 
+            android:visibility="gone"/>
+        
+            
+            
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="7dp"
+            android:textColor="#666"
+            android:textSize="13sp" />
+
+
+        
+    </RelativeLayout>
+
+</LinearLayout>
